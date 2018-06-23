@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Challenge Two</title>
+    
+    <script>
+	   function setHomeAddress(){
+      var billingbox = document.getElementById("billing");
+      var homebox = document.getElementById("home");
+      var checkbox = document.getElementById("useBilling");
+      //check the checkbox status
+      homebox.disabled = false;
+      if(checkbox.checked == true){
+      homebox.value = billingbox.value;
+      homebox.disabled = true;
+      }
+      else{
+      homebox.disabled = false;
+      homebox.value = null;
+      }
+
+
+     }
+    </script>
+</head>
+<body>
+    <h1>Challenge Two</h1>
+    
+    <form action="challenge3.html">
+      <fieldset>
+        <legend>Billing Information</legend>
+        <div>
+          <label for ="billing">Billing Address:</label><br>
+          <textarea name="billingAdd" id="billing"></textarea>
+        </div>
+
+        <div>
+          <label for ="home">Home Address:</label><br>
+          <input type="checkbox" name="useBilling" onclick = "setHomeAddress()" id="useBilling"> Same as above <br>
+        <textarea name="homeAdd" id="home"></textarea>
+        </div>
+        <input type = "submit" value = "Go To Challenge 3">
+      </fieldset>
+      </form>
+</body>
+</html>

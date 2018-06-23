@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Challenge 5</title>
+	<style>
+	body{
+		margin: 2%;
+		border: 1px solid black;
+		background-color: #b3b3b3;
+	}
+	#image{
+    	line-height:325px;
+		width: 388px;
+    	height: 325px;
+		border:5px solid black;
+		margin:0 auto;
+    	background-repeat: no-repeat;
+    	color:#FFFFFF;
+    	text-align: center;
+    	background-color: #8e68ff;
+    	background-size: cover;
+    	margin-bottom:25px;
+    	font-size:150%;
+	}
+	.preview{
+		width:10%;
+		margin-left:17%;
+    	border: 10px solid black;
+
+	}
+	img{
+		width: 95%;
+		object-fit: contain
+		
+	}
+	h1{
+		text-align: center;
+	}
+	</style>
+
+	<script>
+	// I used Two functions here.  Starter idea at: 
+	// https://codepen.io/ColleenEMc/pen/XmZzWw
+	function upDate(previewPic){
+    imagebox = document.getElementById("image");
+    imagebox.innerHTML = previewPic.alt;
+    imagebox.style.backgroundImage = "url("+previewPic.src+")";
+	}
+
+	function unDo(){
+	imagebox = document.getElementById("image");
+	imagebox.innerHTML = "Hover or tab over/into an image below.";
+	imagebox.style.backgroundImage = "url('')";
+	}
+
+	</script>
+</head>
+
+<body>
+	<h1>Challenge 5</h1>
+		<div id = "image">
+			Hover or tab over/into an image below.
+		</div>
+
+		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+		<img class = "preview" 
+			alt = "Styling with a Evil Cat" 
+			src = "https://assets.saatchiart.com/saatchi/298926/art/2355284/1425443-32.jpg" onmouseover = "upDate(this)" onmouseleave="unDo()">
+
+
+		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->	
+		<img class = "preview" 
+			alt = "With My Catty" 
+			src = "https://i.pinimg.com/736x/48/17/14/48171444c43edef927132532f94e9461.jpg" onmouseover = "upDate(this)" onmouseleave="unDo()">
+	
+		<!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+		<img class = "preview" 
+			src = "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=animal-cat-cute-45201.jpg&fm=jpg"
+			alt = "Young Cat" onmouseover = "upDate(this)" onmouseleave="unDo()">
+
+		<img class = "preview" 
+			src = "https://us.123rf.com/450wm/svetography/svetography1607/svetography160700281/60245604-portrait-of-beautiful-bengal-cat-staring-at-something-studio-shot-over-black-background-copy-space-s.jpg?ver=6" 
+			alt = "Catty Puppy" onmouseover = "upDate(this)" onmouseleave="unDo()">
+
+		<img class = "preview"  
+			src = "https://images.pexels.com/photos/171227/pexels-photo-171227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" 
+			alt = "Rockstar Cat" onmouseover = "upDate(this)" onmouseleave="unDo()">
+
+		<img class = "preview" 
+			src = "https://images.pexels.com/photos/460985/pexels-photo-460985.jpeg?cs=srgb&dl=agriculture-animal-beautiful-460985.jpg&fm=jpg" 
+			alt = "Cats of Instagram" onmouseover = "upDate(this)" onmouseleave="unDo()">
+</body>
+</html>
+	
